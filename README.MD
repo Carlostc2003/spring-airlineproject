@@ -115,9 +115,6 @@ https://spring-airlineproject.onrender.com/swagger-ui/index.html
 
 ```json
 {
-  "_id": {
-    "$oid": "6a12c6a80241d696e5cb6cc0"
-  },
   "userId": "6a1211d168f347741eb488d8",
   "flightId": "6a1208c4b91b597b0df9d2e4",
   "seatClass": "ECONOMY",
@@ -136,9 +133,6 @@ https://spring-airlineproject.onrender.com/swagger-ui/index.html
 
 ```json
 {
-  "_id": {
-    "$oid": "6a12c6a80241d696e5cb6cbf"
-  },
   "flightId": "IL-832",
   "departure": {
     "airport": "ALC",
@@ -173,9 +167,6 @@ https://spring-airlineproject.onrender.com/swagger-ui/index.html
 
 ```json
 {
-  "_id": {
-    "$oid": "6a12c6a80241d696e5cb6cbe"
-  },
   "email": "carlos.tormo@github.com",
   "name": "Carlos",
   "surname": "Tormo",
