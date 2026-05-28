@@ -3,6 +3,7 @@
 ![header-airline-backend-project](docs/img/header-img.png)
 
 REST API developed with **Spring Boot** for the comprehensive management of airline operations.
+You can test it here: https://spring-airlineproject.onrender.com/
 
 ## Technologies  
 
@@ -15,7 +16,7 @@ REST API developed with **Spring Boot** for the comprehensive management of airl
 - Spring Web MVC
 - Jakarta Validation & Jakarta Bean Validation
 - Lombok
-- SpringDoc OpenAPI 2.8.9 Sweager
+- SpringDoc OpenAPI 2.8.9 Sweager (https://spring-airlineproject.onrender.com/swagger-ui/index.html)
 - JUnit 5 Jupiter
 - Mockito 5.14.2
 - BCryptPasswordEncoder, Pbkdf2PasswordEncoder, DelegatingPasswordEncoder & CORS config
@@ -85,7 +86,8 @@ Once the backend is running, go to the following link where you can find all the
 
 `http:// [domain] /swagger-ui/index.html`
 
-The domain will be localhost:8080 if you haven't made any changes.
+The domain will be localhost:8080 if you haven't made any changes. If you want to get the information, go here.
+https://spring-airlineproject.onrender.com/swagger-ui/index.html
 
 ## MongoDB Structure
 
@@ -93,7 +95,7 @@ The domain will be localhost:8080 if you haven't made any changes.
 
 ```json
 {
-  "_id": "EC-XAB",
+  "_id": "EC-123",
   "model": "Airbus A380-800",
   "features": {
     "starlink": true,
