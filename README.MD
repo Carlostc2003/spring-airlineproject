@@ -2,7 +2,7 @@
 
 ![header-airline-backend-project](docs/img/header-img.png)
 
-REST API developed with **Spring Boot** for the comprehensive management of airline operations.
+REST API developed with **Spring Boot** for the comprehensive management of airline operations.  
 You can test it here: https://spring-airlineproject.onrender.com/
 
 ## Technologies  
