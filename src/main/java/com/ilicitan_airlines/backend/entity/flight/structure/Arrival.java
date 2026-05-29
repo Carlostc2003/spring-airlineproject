@@ -16,10 +16,10 @@ public class Arrival implements Serializable {
             regexp = Regex.AIRPORT_IATA,
             message = "Airport must be a valid IATA code (3 uppercase letters)"
     )
-    private String airport_code;
+    private String airportCode;
 
     @NotBlank(message = "City airport is required")
-    private String city_airport;
+    private String cityAirport;
 
     @NotNull(message = "Arrival date is required")
     @Future(message = "Arrival date must be in the future")
