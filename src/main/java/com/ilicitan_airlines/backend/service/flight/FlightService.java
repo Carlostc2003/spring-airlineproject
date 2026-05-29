@@ -1,5 +1,6 @@
 package com.ilicitan_airlines.backend.service.flight;
 
+import com.ilicitan_airlines.backend.dto.flight.AirportsDepDTO;
 import com.ilicitan_airlines.backend.entity.flight.Flight;
 import java.time.Instant;
 import java.util.List;
@@ -10,4 +11,5 @@ public interface FlightService {
     List<Flight> list();
     void delete(String id);
     List<Flight> searchFlights(String departure, String arrival, Instant date, String seatClass);
+    List<AirportsDepDTO> getAirportsDep();
 }

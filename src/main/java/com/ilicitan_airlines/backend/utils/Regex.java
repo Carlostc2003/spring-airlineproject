@@ -5,7 +5,7 @@ public class Regex {
 
     public static final String PASSWORD = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).+$";
     public static final String FLIGHT_IATA = "^IL-[1-9]\\d{2}$";
-    public static final String REGISTRATION = "^[A-Z]{2}-\\d{3}$";
+    public static final String REGISTRATION = "^[A-Z0-9]{2}-[A-Z0-9]{3}$";
     public static final String SEAT = "^[A-Z]\\d{1,3}$";
     public static final String PHONE_PREFIX = "^\\+\\d{1,4}$";
     public static final String PHONE_NUMBER = "^\\d{6,15}$";

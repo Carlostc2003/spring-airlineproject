@@ -17,7 +17,6 @@ public class FlightDTO {
     private String id;
 
     @NotBlank(message = "Flight ID is required")
-    @Size(min = 3, max = 10, message = "Flight ID must be between 3 and 10 characters")
     @Pattern(
             regexp = Regex.FLIGHT_IATA,
             message = "Flight ID must follow format IL-100 to IL-999"
@@ -53,7 +52,7 @@ public class FlightDTO {
     @NotBlank(message = "Aircraft ID is required")
     @Pattern(
             regexp = Regex.REGISTRATION,
-            message = "Aircraft ID must follow format AA-000 (2 uppercase letters, dash, 3 digits)"
+            message = "Aircraft ID must follow format AA-XXX (2 uppercase letters, dash, 3 characters)"
     )
     @Schema(description = "ID of the aircraft assigned to this flight", example = "AA-123")
     private String aircraftId;

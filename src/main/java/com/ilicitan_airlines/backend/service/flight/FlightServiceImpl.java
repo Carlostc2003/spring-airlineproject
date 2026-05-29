@@ -1,5 +1,6 @@
 package com.ilicitan_airlines.backend.service.flight;
 
+import com.ilicitan_airlines.backend.dto.flight.AirportsDepDTO;
 import com.ilicitan_airlines.backend.exception.*;
 import com.ilicitan_airlines.backend.entity.flight.*;
 import com.ilicitan_airlines.backend.repository.*;
@@ -54,15 +55,20 @@ public class FlightServiceImpl implements FlightService {
 
         return switch (seatClass.toUpperCase()) {
             case "ECONOMY" ->
-                    fr.findByDepartureAirportAndArrivalAirportAndDepartureDateBetweenAndSeatsEconomyGreaterThan
+                    fr.findFlightsEconomy
                             (departure, arrival, startOfDay, endOfDay, 0);
             case "XXL" ->
-                    fr.findByDepartureAirportAndArrivalAirportAndDepartureDateBetweenAndSeatsXxlGreaterThan
+                    fr.findFlightsXxl
                             (departure, arrival, startOfDay, endOfDay, 0);
             case "BUSINESS" ->
-                    fr.findByDepartureAirportAndArrivalAirportAndDepartureDateBetweenAndSeatsBusinessGreaterThan
+                    fr.findFlightsBusiness
                             (departure, arrival, startOfDay, endOfDay, 0);
             default -> throw new BadRequestException("Invalid seat class");
         };
+    }
+
+    @Override
+    public List<AirportsDepDTO> getAirportsDep() {
+        return fr.getAirportsDep();
     }
 }

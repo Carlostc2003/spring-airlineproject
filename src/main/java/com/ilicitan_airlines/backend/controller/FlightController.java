@@ -1,5 +1,6 @@
 package com.ilicitan_airlines.backend.controller;
 
+import com.ilicitan_airlines.backend.dto.flight.AirportsDepDTO;
 import com.ilicitan_airlines.backend.dto.flight.FlightDTO;
 import com.ilicitan_airlines.backend.entity.flight.Flight;
 import com.ilicitan_airlines.backend.mapper.Mapper;
@@ -79,5 +80,12 @@ public class FlightController {
             @Parameter(description = "Preferred seat class", example = "ECONOMY") @RequestParam String seatClass) {
         List<FlightDTO> flights = fs.searchFlights(departure, arrival, Instant.parse(date), seatClass).stream().map(m::toDTO).toList();
         return ResponseEntity.ok(flights);
+    }
+
+    @Operation(summary = "List of departure information available", description = "Unique list of airports city & airports IATA codes")
+    @ApiResponse(responseCode = "200", description = "Lista de aeropuertos devuelta con éxito")
+    @GetMapping("/departures")
+    public ResponseEntity<List<AirportsDepDTO>> getAirportsDep() {
+        return ResponseEntity.ok(fs.getAirportsDep());
     }
 }

@@ -95,7 +95,7 @@ public class FlightServiceTest {
         Instant start = date.truncatedTo(ChronoUnit.DAYS);
         Instant end = start.plus(1, ChronoUnit.DAYS).minusMillis(1);
 
-        when(fr.findByDepartureAirportAndArrivalAirportAndDepartureDateBetweenAndSeatsEconomyGreaterThan("ALC", "MAD", start, end, 0))
+        when(fr.findFlightsEconomy("ALC", "MAD", start, end, 0))
                 .thenReturn(List.of(f));
 
         List<Flight> res = srv.searchFlights("ALC", "MAD", date, "ECONOMY");
@@ -110,7 +110,7 @@ public class FlightServiceTest {
         Instant start = date.truncatedTo(ChronoUnit.DAYS);
         Instant end = start.plus(1, ChronoUnit.DAYS).minusMillis(1);
 
-        when(fr.findByDepartureAirportAndArrivalAirportAndDepartureDateBetweenAndSeatsXxlGreaterThan("ALC", "MAD", start, end, 0))
+        when(fr.findFlightsXxl("ALC", "MAD", start, end, 0))
                 .thenReturn(List.of(f));
 
         List<Flight> res = srv.searchFlights("ALC", "MAD", date, "XXL");
@@ -125,7 +125,7 @@ public class FlightServiceTest {
         Instant start = date.truncatedTo(ChronoUnit.DAYS);
         Instant end = start.plus(1, ChronoUnit.DAYS).minusMillis(1);
 
-        when(fr.findByDepartureAirportAndArrivalAirportAndDepartureDateBetweenAndSeatsBusinessGreaterThan("ALC", "MAD", start, end, 0))
+        when(fr.findFlightsBusiness("ALC", "MAD", start, end, 0))
                 .thenReturn(List.of(f));
 
         List<Flight> res = srv.searchFlights("ALC", "MAD", date, "BUSINESS");
