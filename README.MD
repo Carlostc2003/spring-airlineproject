@@ -51,11 +51,11 @@ cd spring-airlineproject/backend
 ### 2. Configure environment variables
 
 ```properties
-server.port=${SERVER_PORT:8080}
+server.port=${PORT:8080}
 app.cors.allowed-origins=${APP_CORS_ALLOWED_ORIGINS:http://localhost:4200,http://127.0.0.1:4200}
 spring.mongodb.uri=${SPRING_MONGODB_URI}
 ```
-- `SERVER_PORT` Backend port, by default 8080, configure it according to your preferences, make sure the indicated port is free.
+- `PORT` Backend port, by default 8080, configure it according to your preferences, make sure the indicated port is free.
 - `APP_CORS_ALLOWED_ORIGINS` The allowed domain for CORS is the frontend domain, or leave it as default if it is local.
 - `SPRING_MONGODB_URI`URI for database access in MongoDB Cloud Atlas, example:
 ```
