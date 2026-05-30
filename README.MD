@@ -211,3 +211,9 @@ https://spring-airlineproject.onrender.com/swagger-ui/index.html
   }
 ]
 ````
+
+- `30/05/2026` Now you can access the actuator api, allowing you to use health, mappings, metrics and info.
+  - `health` https://spring-airlineproject.onrender.com/actuator/health
+  - `mappings` https://spring-airlineproject.onrender.com/actuator/mappings
+  - `metrics` https://spring-airlineproject.onrender.com/actuator/metrics
+  - `info` https://spring-airlineproject.onrender.com/actuator/info
